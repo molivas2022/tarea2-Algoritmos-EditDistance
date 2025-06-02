@@ -61,7 +61,7 @@ static size_t lcs(const string &str1, const string &str2) {
     return dp[m][n];
 }
 
-size_t Verifier::operator()(string& str1, string& str2) {
+size_t Verifier::operator()(const string& str1, const string& str2) const {
     return str1.length() + str2.length() - 2*lcs(str1, str2);
 }
 

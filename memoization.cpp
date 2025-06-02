@@ -9,7 +9,7 @@ using namespace std;
 
 static string _name = string("Memoización");
 
-size_t TopDownMemoization::operator()(string& str1, string& str2) {
+size_t TopDownMemoization::operator()(const string& str1, const string& str2) const {
     return 0;  /* placeholder */
 }
 

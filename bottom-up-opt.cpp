@@ -9,7 +9,7 @@ using namespace std;
 
 static string _name = string("Optimizado");
 
-size_t BottomUpOptimized::operator()(string& str1, string& str2) {
+size_t BottomUpOptimized::operator()(const string& str1, const string& str2) const {
     return 0;  /* placeholder */
 }
 

@@ -9,7 +9,7 @@ using namespace std;
 
 static string _name = string("Dinámico");
 
-size_t BottomUp::operator()(string& str1, string& str2) {
+size_t BottomUp::operator()(const string& str1, const string& str2) const {
     return 0;  /* placeholder */
 }
 
