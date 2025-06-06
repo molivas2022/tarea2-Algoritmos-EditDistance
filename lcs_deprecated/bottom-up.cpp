@@ -1,6 +1,7 @@
 /***************************************************************
     Programación dinámica bottom-up. Sin optimizaciones
     de espacio.
+    Reduce el problema a buscar LCS.
  ***************************************************************/
 
 #include "solution.h"

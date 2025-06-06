@@ -1,5 +1,6 @@
 /***************************************************************
     Método recursivo directo sin Memoización.
+    Reduce el problema a buscar LCS.
  ***************************************************************/
 
 #include "solution.h"

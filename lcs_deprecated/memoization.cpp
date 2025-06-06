@@ -1,6 +1,7 @@
 /***************************************************************
     Programación dinámica top-down que usa Memoización para
     las llamadas recursivas.
+    Reduce el problema a buscar LCS.
  ***************************************************************/
 
 #include "solution.h"
