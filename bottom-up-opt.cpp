@@ -12,6 +12,12 @@ using namespace std;
 static string _name = string("Optimizado");
 
 size_t BottomUpOptimized::operator()(const string& str1, const string& str2) const {
+    /* El algoritmo a continuación es O(str1.length()) en espacio */
+    /* Así que hacemos lo siguiente para conseguir O(min(str1.length(), str2.length())) */
+    if (str1.length() > str2.length()) {
+        return (*this)(str2, str1);
+    }
+
     /* Constantes */
     const size_t n1 = str1.length();
     const size_t n2 = str2.length();
