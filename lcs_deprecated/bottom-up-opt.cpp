@@ -1,6 +1,7 @@
 /***************************************************************
     Programación dinámica bottom-up que implementa
     optimizaciones de espacio.
+    Reduce el problema a buscar LCS.
  ***************************************************************/
 
 #include "solution.h"
