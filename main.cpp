@@ -21,19 +21,22 @@
 using namespace std;
 
 /* Función auxiliar para leer un archivo como string */
-string file_to_str(const string& file_path) {
+string file_to_str(const string &file_path)
+{
     ifstream file(file_path);
-    if (!file) {
+    if (!file)
+    {
         throw runtime_error("Error al leer el archivo: " + file_path);
     }
     return string((istreambuf_iterator<char>(file)), istreambuf_iterator<char>());
 }
 
-
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[])
+{
 
     /* Argumentos de ejecución */
-    if (argc != 4) {
+    if (argc != 4)
+    {
         cerr << "Formato de la entrada no válido" << endl;
         return 1;
     }
@@ -44,32 +47,39 @@ int main(int argc, char* argv[]) {
     string str2;
 
     /* Lectura */
-    try {
+    try
+    {
         str1 = file_to_str(file_path1);
         str2 = file_to_str(file_path2);
-    } catch (const exception& e) {
+    }
+    catch (const exception &e)
+    {
         cerr << "Error: " << e.what() << endl;
         return 1;
     }
 
     /* Método */
-    Solution* solution;
-    switch (method) {
-        case 0:
-            solution = new Verifier();
-            break;
-        case 1:
-            solution = new TopDownMemoization();
-            break;
-        case 2:
-            solution = new BottomUp();
-            break;
-        case 3:
-            solution = new BottomUpOptimized();
-            break;
-        default:
-            cerr << "Argumento no válido" << endl;
-            return 1;
+    Solution *solution;
+    switch (method)
+    {
+    case 0:
+        solution = new Verifier();
+        break;
+    case 1:
+        solution = new TopDown();
+        break;
+    case 2:
+        solution = new TopDownMemoization();
+        break;
+    case 3:
+        solution = new BottomUp();
+        break;
+    case 4:
+        solution = new BottomUpOptimized();
+        break;
+    default:
+        cerr << "Argumento no válido" << endl;
+        return 1;
     }
 
     /* Prueba */
