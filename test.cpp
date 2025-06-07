@@ -33,10 +33,7 @@ string random_string(size_t length) {
 }
 
 /* Corresponde a un sólo test aleatorio */
-bool test(const std::vector<Solution*>& solutions, const Solution& verifier) {
-    /* Entrada */
-    string str1 = random_string(random_length());
-    string str2 = random_string(random_length());
+bool test(const std::vector<Solution*>& solutions, const Solution& verifier, string str1, string str2) {
     cout << "Entrada:" << endl;
     cout << "\tString 1: \t" << '"' << str1 << '"' << endl;
     cout << "\tString 2: \t" << '"' << str2 << '"' << endl;
@@ -66,11 +63,19 @@ int main() {
     
     Solution* verifier = new Verifier();
 
+    std::vector<string>strs;
+    strs.push_back("computer");
+    strs.push_back("compiler");
+    strs.push_back("data");
+    strs.push_back("adaptable");
+
     /* Test */
     size_t count = 0;
-    for (size_t t = 0; t < number_of_tests; t++) {
-        if (test(solutions, *verifier)) {
-            count++;
+    for (string str1: strs) {
+        for (string str2: strs) {
+            if (test(solutions, *verifier, str1, str2)) {
+                count++;
+            }
         }
     }
     cout << endl << "Success rate: " << count << "\\" << number_of_tests << endl;
