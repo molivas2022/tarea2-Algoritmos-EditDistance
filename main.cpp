@@ -86,9 +86,10 @@ int main(int argc, char *argv[])
     auto start = chrono::high_resolution_clock::now();
     auto output = (*solution)(str1, str2);
     auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double, nano> duration = end - start;
-    cout << "Salida: " << output << endl;
-    cout << "Tiempo de ejecución: " << duration.count() << " ns" << endl;
+    chrono::duration<double, milli> duration = end - start;
+
+    // Solución - Tiempo de ejecución en NS
+    cout << solution->name() << ", " << output << ", " << duration.count();
 
     /* Liberar memoria */
     delete solution;

@@ -1,0 +1,13 @@
+name, edit distance, time(ms), memory_KB, file1, file2
+Verificador, 3748, 3.19124, 6432, files/test4.txt, files/test1.txt
+Verificador, 3456, 16.2436, 22152, files/test4.txt, files/test2.txt
+Verificador, 3476, 37.869, 47260, files/test4.txt, files/test3.txt
+Memoización, 3748, 2.76199, 6480, files/test4.txt, files/test1.txt
+Memoización, 3452, 25.8914, 22536, files/test4.txt, files/test2.txt
+Memoización, 3476, 57.1062, 48068, files/test4.txt, files/test3.txt
+Dinámico, 3748, 1.99823, 6428, files/test4.txt, files/test1.txt
+Dinámico, 3452, 10.4838, 22224, files/test4.txt, files/test2.txt
+Dinámico, 3476, 25.4305, 47696, files/test4.txt, files/test3.txt
+Optimizado, 3748, 0.71549, 3944, files/test4.txt, files/test1.txt
+Optimizado, 3452, 4.26091, 3884, files/test4.txt, files/test2.txt
+Optimizado, 3476, 9.96926, 3944, files/test4.txt, files/test3.txt
