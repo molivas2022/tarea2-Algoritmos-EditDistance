@@ -1,5 +1,5 @@
 /***************************************************************
-    Pequeño script auxiliar para visualizar output de
+    Pequeño script para visualizar output de
     distintos métodos para un mismo input pequeño aleatorio
  ***************************************************************/
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const string chars = "ABCDE";
+const string chars = "abcde";
 const size_t string_length = 12;
 const size_t number_of_tests = 100;
 
@@ -73,7 +73,7 @@ int main() {
             count++;
         }
     }
-    cout << endl << "Success rate: " << count << "\\" << number_of_tests << endl;
+    cout << endl << "Tasa de éxito: " << count << "\\" << number_of_tests << endl;
 
     /* Liberar memoria */
     for (auto solution: solutions) {

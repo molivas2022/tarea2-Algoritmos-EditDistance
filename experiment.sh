@@ -76,11 +76,10 @@ for linea in "${combinaciones[@]}"; do
     MEMORY_TMP=$(mktemp)
 
     # Ejecutar programa con time, separando stdout y stderr
-    command /usr/bin/time -f "%M" -o "$MEMORY_TMP" ./main "$param1" "$input1" "$input2" > "$OUTPUT_TMP"
+    command /usr/bin/time -f "%M" -o "$MEMORY_TMP" ./performance_test "$param1" "$input1" "$input2" > "$OUTPUT_TMP"
 
     # salida del programa
     PROGRAM_OUTPUT=$(tr '\n' ' ' < "$OUTPUT_TMP" | tr -d '\r')
-
 
     # Leer uso de memoria en KB
     MEMORY_KB=$(cat "$MEMORY_TMP")

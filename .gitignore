@@ -34,5 +34,6 @@
 # 𓁹‿𓁹
 .me/*
 .vscode/*
-main
-test
+test_cases
+correctness_test
+performance_test
