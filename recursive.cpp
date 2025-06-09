@@ -45,3 +45,6 @@ const string &TopDown::name() const
 {
     return _name;
 }
+
+/* Destructor */
+TopDown::~TopDown() {}

@@ -53,3 +53,6 @@ size_t BottomUp::operator()(const string& str1, const string& str2) const {
 const string& BottomUp::name() const {
     return _name;
 }
+
+/* Destructor */
+BottomUp::~BottomUp() {}

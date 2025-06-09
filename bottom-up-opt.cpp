@@ -64,3 +64,6 @@ size_t BottomUpOptimized::operator()(const string& str1, const string& str2) con
 const string& BottomUpOptimized::name() const {
     return _name;
 }
+
+/* Destructor */
+BottomUpOptimized::~BottomUpOptimized() {}

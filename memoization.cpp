@@ -69,3 +69,6 @@ const string &TopDownMemoization::name() const
 {
     return _name;
 }
+
+/* Destructor */
+TopDownMemoization::~TopDownMemoization() {}
