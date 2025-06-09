@@ -68,3 +68,6 @@ size_t Verifier::operator()(const string& str1, const string& str2) const {
 const string& Verifier::name() const {
     return _name;
 }
+
+/* Destructor */
+Verifier::~Verifier() {}
